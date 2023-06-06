@@ -13,6 +13,7 @@ Template: astra
     border: none;
 }
 
-.editor-styles-wrapper {
-    background: #00000000;
+.editor-styles-wrapper,
+.is-desktop-preview {
+    background: #00000000 !important;
 }
