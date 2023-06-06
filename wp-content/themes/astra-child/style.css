@@ -12,3 +12,7 @@ Template: astra
 .ast-header-breadcrumb {
     border: none;
 }
+
+.editor-styles-wrapper {
+    background: #00000000;
+}
