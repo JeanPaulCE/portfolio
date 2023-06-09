@@ -1,4 +1,3 @@
-
 .bg-sc {
   position: fixed;
   width: 24.3vw;
@@ -35,4 +34,8 @@
   filter: blur(26.22vw);
   transform: matrix(-0.67, -0.74, 0.49, -0.13, 0, 0);
   z-index: 0;
+}
+
+.is-desktop-preview {
+  background: #00000000 !important;
 }
