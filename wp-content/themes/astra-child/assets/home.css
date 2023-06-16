@@ -1,0 +1,164 @@
+.type {
+    display: inline-block !important;
+    width: min-content;
+    padding-right: 8px;
+    overflow: hidden;
+    border-right: 0.15em solid transparent;
+    white-space: nowrap;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+.r_in {
+    animation: r_in 1.8s;
+}
+
+@keyframes r_in {
+    from {
+        left: 1500px;
+    }
+
+    to {
+        left: 0;
+    }
+
+    20% {
+        left: 1499px;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: var(--light);
+    }
+
+    50% {
+        border-color: transparent;
+    }
+}
+
+.container {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.container .window {
+    box-sizing: border-box;
+    position: relative;
+    width: 85vw;
+    aspect-ratio: 16/9;
+    background: #171A1B;
+    opacity: 0.8;
+    border: 0.15vw solid #4A4A4A;
+    border-radius: 15px 15px 0px 0px;
+    left: 22%;
+}
+
+.container .window .head .sc1 {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    left: 15px;
+    top: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    background: #FF5F56;
+}
+
+.container .window .head .sc2 {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    left: 15px;
+    top: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    background: #FFBD2E;
+}
+
+.container .window .head .sc3 {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    left: 15px;
+    top: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    background: #27C93F;
+}
+
+.container .window .head .bar {
+    display: inline-block;
+    width: 50%;
+    height: 14px;
+    top: 10px;
+    margin: 5px 0;
+    left: 20%;
+    border-radius: 5px;
+    background-color: #212225;
+}
+
+.container .window .text h2 {
+    font-size: 26px;
+    margin-bottom: 1rem;
+    margin-left: calc(var(--x)*3);
+    font-weight: var(--semi-bold);
+}
+
+.container .window .text h2:first-of-type {
+    margin-top: calc(var(--x)*2);
+}
+
+.container .window .text h2 span {
+    font-size: 26px;
+    font-weight: var(--semi-bold);
+    color: var(--green);
+}
+
+.container .window .text p {
+    font-weight: var(--light);
+    font-size: 18px;
+    width: 70%;
+    margin-left: calc(var(--x)*4);
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1250px) {
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .container .window {
+        width: 55vw;
+        left: 0;
+    }
+
+    .container .window .head {
+        height: 7%;
+    }
+
+    .container .window .text {
+        display: inline-flex;
+        position: relative;
+        height: 93%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container .window .text h2:first-of-type {
+        margin-top: 0;
+    }
+
+    .container .window .text p {
+        width: 40%;
+    }
+}

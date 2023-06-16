@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+/* semantic color variables for this project */
+:root {
+
+    --color-text: #fff;
+    --background: #1F2429;
+    --green: #20A74D;
+
+    --light: 300;
+    --regular: 400;
+    --semi-bold: 600;
+    --bold: 700;
+
+
+    --x: 40px;
+
+    --small: 480px;
+    --mid: 720px;
+    --big: 1200px;
+    --full: 1920px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --x: 30px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    :root {
+        --x: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    :root {
+        --x: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --x: 10px;
+    }
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: var(--background);
+    transition: color 0.5s, background-color 0.5s;
+    line-height: 1.6;
+    font-family: 'Open Sans';
+    font-weight: var(--regular);
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
