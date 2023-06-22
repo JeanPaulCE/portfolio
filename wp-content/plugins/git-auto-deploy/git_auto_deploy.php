@@ -56,7 +56,7 @@ add_action('rest_api_init', function () {
 });
 
 
-function baner_init_adminPage()
+function auto_deploy_init_adminPage()
 {
     if (is_admin()) add_action('admin_menu', 'auto_deploy_create_menu');
 }
@@ -88,3 +88,4 @@ function auto_deploy_page()
     <h1>Auto Deploy</h1>
 <?php
 }
+auto_deploy_init_adminPage();
