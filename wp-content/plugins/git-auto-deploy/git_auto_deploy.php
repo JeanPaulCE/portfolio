@@ -20,7 +20,7 @@ define('auto_deploy', trim(auto_deploy__FILE__, "calendario-ucr.php"));
 define('auto_deploy_BASE', plugin_basename(auto_deploy__FILE__));
 define('auto_deploy_URL', plugins_url('/', auto_deploy__FILE__));
 
-function my_awesome_func($x)
+function deploy($x)
 {
     $commit = shell_exec('git commit -a -m "content from producction before pull" ');
     $push = shell_exec('git push');
@@ -51,7 +51,7 @@ function my_awesome_func($x)
 add_action('rest_api_init', function () {
     register_rest_route('auto_deploy/v1', '/pull/', array(
         'methods' => 'POST',
-        'callback' => 'my_awesome_func',
+        'callback' => 'deploy',
     ));
 });
 
@@ -86,6 +86,16 @@ function auto_deploy_page()
     }
 ?>
     <h1>Auto Deploy</h1>
+
+    <p> Ruta de deploy: /wp-json/auto_deploy/v1/pull </p>
+    <p> metodo: post </p>
+    <p> al llamar a la ruta anterior ejecutara un comit del servidor, un push y un pull de manera que sincronizara con el repositorio </p>
+    <p> para automatizar su uso conecte con Webhooks de github o servicios similares </p>
+    <form action="/api/wp-json/auto_deploy/v1/pull" method="post">
+        <label> Ejecutar deploy </label>
+        <input class="auto_deploy_send button button-primary" value="Deploy" type="submit" />
+    </form>
+
 <?php
 }
 auto_deploy_init_adminPage();
