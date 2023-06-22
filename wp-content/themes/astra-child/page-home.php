@@ -50,6 +50,12 @@ get_header(); ?>
 		</div>
 	</div>
 
+	<?php astra_primary_content_top(); ?>
+
+	<?php astra_content_page_loop(); ?>
+
+	<?php astra_primary_content_bottom(); ?>
+
 
 </div><!-- #primary -->
 <div class="bg-sc"></div>

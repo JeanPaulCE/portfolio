@@ -1,0 +1,16 @@
+.menu_documentacion {
+    text-decoration: none !important;
+    list-style: none;
+    background: #334155;
+    border-radius: 4px;
+    padding: 1.5rem 1rem !important;
+}
+
+.menu_documentacion>li>a {
+    text-decoration: none !important;
+
+}
+
+.menu_documentacion>li>a:hover {
+    color: var(--ast-global-color-1);
+}

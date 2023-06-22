@@ -26,4 +26,20 @@ function child_enqueue_styles()
 	}
 }
 
+function cards_script()
+{
+	wp_enqueue_script('cards_js', get_stylesheet_directory_uri() . "/blocks/cards/scrip.js", [], null, true);
+}
+
 add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
+
+add_action('admin_footer', function () {
+?>
+	<style>
+		.editor-styles-wrapper {
+			background-color: var(--ast-global-color-4);
+			;
+		}
+	</style>
+<?php
+});

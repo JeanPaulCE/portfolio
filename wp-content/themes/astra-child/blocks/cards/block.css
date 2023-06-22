@@ -1,0 +1,159 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 380px;
+    background: #191d21;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    justify-self: center;
+    border-radius: 0.5rem;
+    aspect-ratio: 1/1;
+    max-height: 380px;
+}
+
+.card>.more {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.card>.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.card>p {
+    margin-top: 1rem;
+    padding: 0rem 1rem;
+}
+
+.card>.main-content>.title-content {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.card>.main-content>.title-content>* {
+    display: inline-block;
+    margin: 0;
+}
+
+.card>.more>a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--colot-text);
+    padding: 0.2rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #ffffff;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.card>.main-content>.title-content>img {
+    max-width: 36px;
+}
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.8rem;
+}
+
+.card>.main-content>img {
+    display: none;
+}
+
+.cards>h2 {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    .cards {
+        margin: 0 1.5rem;
+    }
+
+    .card>.main-content>img {
+        display: inline-block;
+        transform: rotate(180deg);
+    }
+
+    .hide>.main-content>img {
+
+        transform: rotate(0deg);
+    }
+
+    .cards_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .card {
+        overflow: hidden;
+    }
+
+    .hide {
+        aspect-ratio: 5/1;
+        animation-duration: 1s;
+        animation-name: an_hide;
+    }
+
+    .hide>.content {
+        display: none;
+    }
+
+    .show {
+        animation-duration: 1s;
+        animation-name: an_show;
+        aspect-ratio: 1/1;
+    }
+
+
+
+    @keyframes an_hide {
+        from {
+            aspect-ratio: 1/1;
+        }
+
+        to {
+            aspect-ratio: 5/1;
+        }
+    }
+
+    @keyframes an_show {
+        from {
+            aspect-ratio: 5/1;
+        }
+
+        to {
+            aspect-ratio: 1/1;
+        }
+    }
+
+}
