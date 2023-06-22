@@ -23,12 +23,15 @@ define('auto_deploy_URL', plugins_url('/', auto_deploy__FILE__));
 function my_awesome_func($x)
 {
     $commit = shell_exec('git commit -a -m "content from producction before pull" ');
-    $output = shell_exec('git pull');
-
+    $push = shell_exec('git push');
+    $pull = shell_exec('git pull');
+    $status = shell_exec('git status');
     header('Content-type: application/json');
     $data = [
         "comit" => $commit,
-        "response" => $output,
+        "push" => $push,
+        "pull" => $pull,
+        "status" => $status,
         "status" => 200
     ];
     $json = json_encode($data);
