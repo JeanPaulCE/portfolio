@@ -24,6 +24,9 @@ function child_enqueue_styles()
 	if (is_page("Home")) {
 		wp_enqueue_style('home-page', get_stylesheet_directory_uri() . '/assets/home.css');
 	}
+	if (is_single()) {
+		wp_enqueue_style('single-page', get_stylesheet_directory_uri() . '/assets/docs.css');
+	}
 }
 
 function cards_script()

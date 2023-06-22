@@ -8,7 +8,7 @@ Template: astra
 */
 @import url('./assets/bases.css');
 @import url('./assets/backgound.css');
-@import url('./assets/docs.css');
+
 
 .ast-header-breadcrumb {
     border: none;
