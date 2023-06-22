@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Plugin Name: Auto Deploy (git)
@@ -54,3 +53,4 @@ add_action('rest_api_init', function () {
         'callback' => 'my_awesome_func',
     ));
 });
+
