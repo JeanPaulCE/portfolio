@@ -54,3 +54,37 @@ add_action('rest_api_init', function () {
         'callback' => 'my_awesome_func',
     ));
 });
+
+
+function baner_init_adminPage()
+{
+    if (is_admin()) add_action('admin_menu', 'auto_deploy_create_menu');
+}
+
+
+function auto_deploy_create_menu()
+{
+
+    //create new top-level menu
+    add_menu_page('Auto Deploy', 'AutoDeploy', 'administrator', __FILE__, 'auto_deploy_page', auto_deploy_URL . '/assets/ico.png');
+
+    //call register settings function
+    add_action('admin_init', 'register_atuo_deploy_plugin_settings');
+}
+
+
+function register_atuo_deploy_plugin_settings()
+{
+    //register our settings
+    register_setting('baner-ucr-settings-group', 'all_data');
+}
+
+function auto_deploy_page()
+{
+    if (is_admin()) {
+        #wp_enqueue_style('baners-css', Baners_URL . '/admin/style.css');
+    }
+?>
+    <h1>Auto Deploy</h1>
+<?php
+}
