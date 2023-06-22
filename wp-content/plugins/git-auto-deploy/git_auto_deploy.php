@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: Auto Deploy (git)
  * Description: recibe una llamada de un hoock y hace pull al repositorio
@@ -49,8 +50,7 @@ function my_awesome_func($x)
 
 add_action('rest_api_init', function () {
     register_rest_route('auto_deploy/v1', '/pull/', array(
-        'methods' => 'GET',
+        'methods' => 'POST',
         'callback' => 'my_awesome_func',
     ));
 });
-
