@@ -86,13 +86,17 @@ function auto_deploy_page()
     }
 ?>
     <h1>Auto Deploy</h1>
-
+    <br />
+    <br />
     <p> Ruta de deploy: /wp-json/auto_deploy/v1/pull </p>
     <p> metodo: post </p>
     <p> al llamar a la ruta anterior ejecutara un comit del servidor, un push y un pull de manera que sincronizara con el repositorio </p>
     <p> para automatizar su uso conecte con Webhooks de github o servicios similares </p>
+    <br />
+    <br />
     <form action="/api/wp-json/auto_deploy/v1/pull" method="post">
         <label> Ejecutar deploy </label>
+        <br />
         <input class="auto_deploy_send button button-primary" value="Deploy" type="submit" />
     </form>
 
