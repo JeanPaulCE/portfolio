@@ -66,7 +66,7 @@ function auto_deploy_create_menu()
 {
 
     //create new top-level menu
-    add_menu_page('Auto Deploy', 'AutoDeploy', 'administrator', __FILE__, 'auto_deploy_page', auto_deploy_URL . '/assets/ico.png');
+    add_menu_page('Auto Deploy', 'AutoDeploy', 'administrator', __FILE__, 'auto_deploy_page', auto_deploy_URL . '/assets/icon.png');
 
     //call register settings function
     add_action('admin_init', 'register_atuo_deploy_plugin_settings');
