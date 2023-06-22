@@ -10,9 +10,7 @@ Template: astra
 @import url('./assets/backgound.css');
 
 
-.ast-header-breadcrumb {
-    border: none;
-}
+
 
 .editor-styles-wrapper,
 .is-desktop-preview {
