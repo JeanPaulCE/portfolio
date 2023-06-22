@@ -22,7 +22,7 @@ define('auto_deploy_URL', plugins_url('/', auto_deploy__FILE__));
 
 function my_awesome_func($x)
 {
-    $output = shell_exec('git --help');
+    $output = shell_exec('git pull');
 
     header('Content-type: application/json');
     $data = [
@@ -44,7 +44,7 @@ function my_awesome_func($x)
 }
 
 add_action('rest_api_init', function () {
-    register_rest_route('auto_deploy/v1', '/auto_deploy/', array(
+    register_rest_route('auto_deploy/v1', '/pull/', array(
         'methods' => 'GET',
         'callback' => 'my_awesome_func',
     ));
