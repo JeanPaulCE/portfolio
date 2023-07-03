@@ -117,7 +117,7 @@
     }
 
     .hide {
-        aspect-ratio: 5/1;
+        aspect-ratio: 5/1.2;
 
         animation-duration: 1s;
         animation-name: an_hide;
@@ -141,13 +141,13 @@
         }
 
         to {
-            aspect-ratio: 5/1;
+            aspect-ratio: 5/1.2;
         }
     }
 
     @keyframes an_show {
         from {
-            aspect-ratio: 5/1;
+            aspect-ratio: 5/1.2;
         }
 
         to {
