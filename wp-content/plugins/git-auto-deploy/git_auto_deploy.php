@@ -16,7 +16,7 @@
  * @package AutoDeploy
  */
 define('auto_deploy__FILE__', __FILE__);
-define('auto_deploy', trim(auto_deploy__FILE__, "calendario-ucr.php"));
+define('auto_deploy', trim(auto_deploy__FILE__, "git_auto_deploy.php"));
 define('auto_deploy_BASE', plugin_basename(auto_deploy__FILE__));
 define('auto_deploy_URL', plugins_url('/', auto_deploy__FILE__));
 
