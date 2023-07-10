@@ -36,15 +36,15 @@ get_header(); ?>
 				<div class="bar"></div>
 			</div>
 			<div class="text">
-				<h2 class="title"><span>Jean Paul Carvajal</span> {</h2>
+				<h2 class="title"><span>Jean Paul Carvajal </span>{</h2>
 				<p class="p1">
 					Hi, I am a full stack developer, below you
 					can see some of my work, just click on
-					the card that interests you.
+					the card that interests you
 				</p>
 				<p class="p2">A single person can create, but together
 					we can expand the frontiers of
-					innovation.</p>
+					innovation</p>
 				<h2 class="end type">}</h2>
 			</div>
 		</div>
